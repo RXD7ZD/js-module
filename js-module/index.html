@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+
+        
+
+        <script src="js/Module.js"></script>
+        <!-- <script src="js/modules/ModuleA.js"></script> -->
+        <!-- <script src="js/modules/ModuleB.js"></script> -->
+        <script>
+            let onloadFunction = document.body.onload;
+            
+    
+            
+            Module.importJS("js/modules/ModuleB.js");
+            Module.entry(function(){
+                console.log("Module对象:",Module);
+                //console.log("ModuleA:",Module.use("ModuleA"));
+                console.log("ModuleB模块内对象:",Module.use("ModuleB"));
+                
+                
+            });
+            
+                
+                
+            
+            
+           
+        </script>
+        
+    </body>
+</html>
